@@ -4,12 +4,14 @@
  */
 package com.decl.generics;
 
+import java.util.HashSet;
+
 /**
  *
  * @author DSA-David
  */
 public class Recauderia<T,T1> {
-     
+    private HashSet<T> l;  
     private T fruta;
     private T1 frutaDos;
     

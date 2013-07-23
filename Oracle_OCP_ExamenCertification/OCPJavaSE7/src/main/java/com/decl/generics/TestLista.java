@@ -5,7 +5,10 @@
 package com.decl.generics;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  *
@@ -13,7 +16,8 @@ import java.util.List;
  */
 public class TestLista {
     public static void main(String[] args) {
-       new  TestLista().listaCheckTres();
+        TestLista.removeDups(new ArrayList<Manzana>());
+        new  TestLista().listaCheckTres();
     }
     public void listaCheckTres(){
         GenericoDos.listaCheckTres(new Manzana());
@@ -31,5 +35,8 @@ public class TestLista {
          List<?> l =  new ArrayList<String>();
         //No compila
         //l.add("lala");
+    }
+    public static <E> Set<E> removeDups(Collection<E> c) {
+        return new LinkedHashSet<E>(c);
     }
 }

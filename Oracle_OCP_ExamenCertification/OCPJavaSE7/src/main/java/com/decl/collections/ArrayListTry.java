@@ -12,7 +12,8 @@ import java.util.List;
  * @author DSA-David
  */
 public class ArrayListTry {
-     private List<String> l = new ArrayList<String>();
+
+    private List<String> l = new ArrayList<String>();
 
     public void operaLinkedList() {
         l.add("hola");
@@ -34,15 +35,25 @@ public class ArrayListTry {
         }
     }
 
+    public void limpiaTodo() {
+        l.clear();
+    }
+
     public void quitaElemento(int i) {
         l.remove(i);
+    }
+
+    public void size() {
+        System.out.println("Size: " + l.size());
     }
 
     public static void main(String[] args) {
         ArrayListTry llt = new ArrayListTry();
         llt.operaLinkedList();
         llt.revisaCollection();
-        llt.quitaElemento(0);
+        llt.size();
+        llt.limpiaTodo();
+        llt.size();
         System.out.println("");
         llt.revisaCollection();
 

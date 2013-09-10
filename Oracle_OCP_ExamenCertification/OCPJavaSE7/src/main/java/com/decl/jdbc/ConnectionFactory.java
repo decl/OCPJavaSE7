@@ -19,13 +19,12 @@ public class ConnectionFactory {
     private static final String user = "root";
     private static final String pwd = "";
 
-    public static Connection createConection() {
+    public static Connection createConection() throws Exception{
         Connection c = null;
         try {
-            System.out.println("Creando conexion");
             c = DriverManager.getConnection(url + bd, user, pwd);
         } catch (SQLException sqle) {
-            throw new RuntimeException(sqle);
+            throw new Exception(sqle);
         }
         return c;
     }

@@ -78,7 +78,7 @@ public class SimpleStatement {
         }
     }
     public static void main(String[] args) {
-        new SimpleStatement().ejecutaConsultaDelete();
+        new SimpleStatement().ejecutaConsultaSelect();
     }
     
 }

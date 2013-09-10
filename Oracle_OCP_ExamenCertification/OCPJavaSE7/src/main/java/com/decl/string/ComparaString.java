@@ -14,8 +14,10 @@ public class ComparaString {
     
     {
         String _test  = new String("hola");
+        String _test2  = new String("hola");
         System.out.println("Comparacion hola1 hola2: "+(hola1==hola2));
-        System.out.println("Comparacion hola1 hola2: "+(hola1==_test));
+        System.out.println("Comparacion hola1 con test: "+(hola1==(_test.toString())));
+        System.out.println("Comparacion test con test2: "+(_test==_test2));
     }
     
     public static void main(String[] args) {
